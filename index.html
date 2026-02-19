@@ -56,8 +56,6 @@
             <th class="w-tanggal">Tanggal</th>
             <th>NIM</th>
             <th>Nama</th>
-            <th>DPU</th>
-            <th>DPP</th>
             <th>Ketua</th>
             <th>Sekretaris</th>
             <th>Penguji 1</th>
@@ -71,8 +69,6 @@
             <th class="w-tanggal">Tanggal</th>
             <th>NIM</th>
             <th>Nama</th>
-            <th>DPU</th>
-            <th>DPP</th>
             <th>Ketua</th>
             <th>Sekretaris</th>
             <th>Penguji 1</th>
@@ -94,20 +90,18 @@
 <script>
     $(document).ready(function () {
         $('#daftar').DataTable({
-            ajax: 'https://siperi.muhdavi.com/api/rekap-sidang',
+            ajax: 'https://situhir.tik-pnl.web.id/api/rekap-sidang',
             deferRender: true,      // jika data banyak yang diload sesuia kebutuhan
             processing: true,
             columns: [
                 { data: 'tanggal' },
-                { data: 'mahasiswa.nim' },
-                { data: 'mahasiswa.nama_mahasiswa' },
-                { data: 'dpu.nama_lengkap' },
-                { data: 'dpp.nama_lengkap' },
-                { data: 'ketua.nama_lengkap' },
-                { data: 'sekretaris.nama_lengkap' },
-                { data: 'penguji_1.nama_lengkap' },                
-                { data: 'penguji_2.nama_lengkap' },                
-                { data: 'penguji_3.nama_lengkap' },
+                { data: 'nim' },
+                { data: 'nama_mahasiswa' },
+                { data: 'ketua' },
+                { data: 'sekretaris' },
+                { data: 'penguji_1' },                
+                { data: 'penguji_2' },                
+                { data: 'penguji_3' },
                 { data: 'judul' },
             ],
             lengthChange: false,
